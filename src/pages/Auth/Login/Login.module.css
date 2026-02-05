@@ -1,0 +1,13 @@
+.stack{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.textGroup {
+
+}
+
+.formGroup {
+
+}

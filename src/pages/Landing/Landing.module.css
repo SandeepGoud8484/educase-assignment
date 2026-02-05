@@ -1,0 +1,47 @@
+.stack {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signupButton,
+.loginButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 14px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+    font-family: var(--font-family-base);
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.signupButton {
+    background-color: var(--color-text-secondary);
+    color: var(--color-text-button);
+}
+
+.loginButton {
+    background-color: var(--color-bg-button);
+    color: var(--color-text-primary);
+}

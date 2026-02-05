@@ -1,0 +1,26 @@
+.button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-base);
+}
+
+.primary {
+    background-color: var(--color-text-secondary);
+    color: var(--color-text-button);
+}
+
+.secondary {
+    background-color: var(--color-bg-button);
+    color: var(--color-text-primary);
+}
+
+.loginButton {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-button);
+}
