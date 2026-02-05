@@ -1,0 +1,54 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radioGroup p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+}
+
+.radioGroup label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    margin-right: 20px;
+}
+
+.radioGroup input[type="radio"] {
+  accent-color: var(--color-text-secondary);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.formButton {
+    margin-top: auto;
+}
+
+.errorMsg {
+    display: flex;
+}

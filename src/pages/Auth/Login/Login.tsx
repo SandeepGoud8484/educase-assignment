@@ -29,7 +29,12 @@ const Login = () => {
     const validatonErrors = handleValidation();
     setErrors(validatonErrors);
     if(Object.keys(validatonErrors).length === 0){
-      navigate('/settings');
+      navigate('/settings', {
+        state: {
+          email,
+          fullname: "Sandeep Goud"
+        }
+      });
     }
   }
 
@@ -42,7 +47,7 @@ const Login = () => {
       <form className={styles.formGroup} onSubmit={handleSubmit}>
         <CustomInput 
         label="Email Address" 
-        type="text" name='email' 
+        type="email" name='email' 
         value={email} 
         placeholder="Enter email address" 
         onChange={(e) => setEmail(e.target.value)}
