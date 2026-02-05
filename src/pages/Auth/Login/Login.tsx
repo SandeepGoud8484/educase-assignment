@@ -4,21 +4,26 @@ import styles from './Login.module.css'
 import Button from '../../../components/common/Button/Button';
 import { useNavigate } from 'react-router';
 
+type ErrorsState = {
+  email?: string;
+  password?: string;
+}
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+  const [errors, setErrors] = useState<ErrorsState>({});
 
   const handleValidation = () => {
-    const newErrors: { email?: string; password?: string } = {};
-    if(!email){
+    const newErrors: ErrorsState = {};
+    if (!email) {
       newErrors.email = "Email is required";
     }
-    if(!password){
+    if (!password) {
       newErrors.password = "Password is required";
     }
-    if(email && !/\S+@\S+\.\S+/.test(email)){
+    if (email && !/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Email is invalid";
     }
     return newErrors;
@@ -28,11 +33,11 @@ const Login = () => {
     e.preventDefault();
     const validatonErrors = handleValidation();
     setErrors(validatonErrors);
-    if(Object.keys(validatonErrors).length === 0){
+    if (Object.keys(validatonErrors).length === 0) {
       navigate('/settings', {
         state: {
           email,
-          fullname: "Sandeep Goud"
+          fullname: email ? email.split("@")[0] : "Marry Doe"
         }
       });
     }
@@ -45,24 +50,24 @@ const Login = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
       </div>
       <form className={styles.formGroup} onSubmit={handleSubmit}>
-        <CustomInput 
-        label="Email Address" 
-        type="email" name='email' 
-        value={email} 
-        placeholder="Enter email address" 
-        onChange={(e) => setEmail(e.target.value)}
-        error={errors.email}
-        required={true}
+        <CustomInput
+          label="Email Address"
+          type="email" name='email'
+          value={email}
+          placeholder="Enter email address"
+          onChange={(e) => setEmail(e.target.value)}
+          error={errors.email}
+          required={true}
         />
-        <CustomInput 
-        label="Password" 
-        type="password" 
-        name='password' 
-        value={password} 
-        placeholder="Enter password" 
-        onChange={(e) => setPassword(e.target.value)}
-        error={errors.password}
-        required={true}
+        <CustomInput
+          label="Password"
+          type="password"
+          name='password'
+          value={password}
+          placeholder="Enter password"
+          onChange={(e) => setPassword(e.target.value)}
+          error={errors.password}
+          required={true}
         />
         <Button variant="loginButton" type='submit'>Login</Button>
       </form>

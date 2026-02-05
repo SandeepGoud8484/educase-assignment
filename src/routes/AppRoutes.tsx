@@ -10,11 +10,11 @@ export default function AppRoutes() {
         <BrowserRouter>
             <Routes>
                 <Route element={<AppLayout />}>
-                <Route path="/" element={<Landing />} />
-                <Route path="/settings" element={<AccountSettings />} />
-                <Route path="/auth/login" element={<Login />} />
-                <Route path="/auth/signup" element={<Signup />} />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/auth/login" element={<Login />} />
+                    <Route path="/auth/signup" element={<Signup />} />
                 </Route>
+                <Route path="/settings" element={<AccountSettings />} />
             </Routes>
         </BrowserRouter>
     )

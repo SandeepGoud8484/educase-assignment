@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+Note:
+The design does not include a back button, so navigation is handled using the browser’s back button as intended.
+To access the Account Settings page, please enter valid input values in either the Signup or Login form and submit the form.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
