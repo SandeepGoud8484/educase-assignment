@@ -5,9 +5,13 @@
 }
 
 .textGroup {
-
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .formGroup {
-
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }

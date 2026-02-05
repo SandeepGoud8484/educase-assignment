@@ -8,10 +8,7 @@
     --color-text-primary: #1D2226;
     --color-text-secondary: #6C25FF;
     --color-text-button: #FFFFFF;
+    --color-text-error: #DD4A3D;
 
     --font-family-base: "Rubik", sans-serif;
-
-    --font-h1: 28px;
-    --lh-tight: 17px;
-    --lh-normal: 36px;
 }

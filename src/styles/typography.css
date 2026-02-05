@@ -22,3 +22,9 @@ p {
   opacity: 0.6;
   color: var(--color-text-primary);
 }
+
+.errorMsg,
+.required {
+  font-size: 14px;
+  color: var(--color-text-error);
+}
